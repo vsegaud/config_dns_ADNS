@@ -1,18 +1,20 @@
-$TTL 7200
-
-@	IN	SOA	tigaud.fr. ns.tigaud.fr. (
-				2018031301;
-				14400;
-				3600;
-				1209600;
-				86400 )
-;
-
-@	IN	NS	ns1.tigaud.fr.
-@	IN	MX	10	mail.tigaud.fr.
-mail	IN	A	192.168.0.4
-ns1	IN	A	192.168.0.1
-ns2	IN	A	192.168.0.2
-www	IN	A	192.168.0.3
-ipv6	IN	AAAA	2001:db8:0:0:0:0:0:1
-
+$ORIGIN .
+$TTL 7200	; 2 hours
+tigaud.fr		IN SOA	tigaud.fr. ns.tigaud.fr. (
+				2018031302 ; serial
+				14400      ; refresh (4 hours)
+				3600       ; retry (1 hour)
+				1209600    ; expire (2 weeks)
+				86400      ; minimum (1 day)
+				)
+			NS	ns1.tigaud.fr.
+			MX	10 mail.tigaud.fr.
+$ORIGIN tigaud.fr.
+ipv6			AAAA	2001:db8::1
+mail			A	192.168.0.4
+ns1			A	192.168.0.1
+ns2			A	192.168.0.2
+$TTL 300	; 5 minutes
+test			A	192.168.0.5
+$TTL 7200	; 2 hours
+www			A	192.168.0.3
