@@ -1,0 +1,15 @@
+$TTL 7200
+@	IN	SOA	tigaud.fr. ns.tigaud.fr. (
+	2018031301;
+	28800;
+	14400;
+	360000;
+	86400);
+;tigaud.fr.	IN	NS	ns1.tigaud.fr.
+@	IN	NS	ns1.tigaud.fr.
+@	IN	NS	ns2.tigaud.fr.
+@	IN	MX	10	mail.tigaud.fr.
+1	IN	PTR	ns1.tigaud.fr.
+2	IN	PTR	ns2.tigaud.fr.
+3	IN	PTR	www.tigaud.fr.
+4	IN	PTR	mail.tigaud.fr.

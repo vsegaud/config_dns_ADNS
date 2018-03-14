@@ -1,0 +1,23 @@
+;
+; 2001:db8::/48
+;
+; Zone file built with the IPv6 Reverse DNS zone builder
+; http://rdns6.com/
+;
+$TTL 1h	; Default TTL
+@	IN	SOA	tigaud.fr.	ns.tigaud.fr. (
+	2018031401	; serial
+	1h		; slave refresh interval
+	15m		; slave retry interval
+	1w		; slave copy expire time
+	1h		; NXDOMAIN cache time
+	)
+
+;
+; domain name servers
+;
+@	IN	NS	ns1.tigaud.fr.
+@	IN	NS	ns2.tigaud.fr.
+
+; IPv6 PTR entries
+1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.b.d.0.1.0.0.2.ip6.arpa.    IN    PTR    ipv6.tigaud.fr

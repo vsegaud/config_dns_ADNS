@@ -1,0 +1,18 @@
+$TTL 7200
+
+@	IN	SOA	tigaud.fr. ns.tigaud.fr. (
+				2018031301;
+				14400;
+				3600;
+				1209600;
+				86400 )
+;
+
+@	IN	NS	ns1.tigaud.fr.
+@	IN	MX	10	mail.tigaud.fr.
+mail	IN	A	192.168.0.4
+ns1	IN	A	192.168.0.1
+ns2	IN	A	192.168.0.2
+www	IN	A	192.168.0.3
+ipv6	IN	AAAA	2001:db8:0:0:0:0:0:1
+
